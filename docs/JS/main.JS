@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function toggleMangakaInfo(mangakaId) {
     const allInfoDivs = document.querySelectorAll(".mangaka-info");
-    allInfoDivs.forEach(div => div.style.display = 'none');  // Oculta todos los divs
+    allInfoDivs.forEach(div => div.style.display = 'none');  
     
     const infoDiv = document.querySelector(`#info-${mangakaId}`);
     if (infoDiv.style.display === 'none' || infoDiv.style.display === '') {
-        infoDiv.style.display = 'block';  // Muestra el div correspondiente
+        infoDiv.style.display = 'block';  
     } else {
-        infoDiv.style.display = 'none';  // Oculta el div correspondiente
+        infoDiv.style.display = 'none'; 
     }
 }
 

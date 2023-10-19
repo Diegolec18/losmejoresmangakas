@@ -20,3 +20,25 @@ function toggleDarkMode() {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    const mangakaItems = document.querySelectorAll("#mangakas-destacados li");
+
+    mangakaItems.forEach(item => {
+        item.addEventListener("click", function() {
+            const mangakaId = item.getAttribute("data-mangaka");
+            toggleMangakaInfo(mangakaId);
+        });
+    });
+});
+
+function toggleMangakaInfo(mangakaId) {
+    const allInfoDivs = document.querySelectorAll(".mangaka-info");
+    allInfoDivs.forEach(div => div.style.display = 'none');  
+    
+    const infoDiv = document.querySelector(`#info-${mangakaId}`);
+    if (infoDiv.style.display === 'none' || infoDiv.style.display === '') {
+        infoDiv.style.display = 'block';  
+    } else {
+        infoDiv.style.display = 'none'; 
+    }
+}

@@ -23,8 +23,6 @@ body.dark-mode footer {
     background-color: #444;  
 }
 
-
-
 header, main, footer {
     max-width: 1000px;
     margin: 20px auto;
@@ -121,4 +119,35 @@ li {
 
 #toggleTheme:active {
     transform: scale(0.95);       
+}
+
+.mangaka-image {
+    width: 800px;   
+    height: auto;   
+    display: block; 
+    margin: 0 auto; 
+}
+
+.mangaka-info img {
+    width: 800px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+#mangakas-destacados li {
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+
+#mangakas-destacados li:hover {
+    background-color: #4A90E2; 
+    color: #ffffff;            
+    cursor: pointer;          
+    padding: 5px;              
+}
+
+main p {
+    text-align: justify;
 }
